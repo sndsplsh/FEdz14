@@ -1,0 +1,71 @@
+let games = [
+  "CS:GO",
+  "Witcher",
+  "Mass Effect",
+  "Heroes of Might and Magic",
+  "STALKER",
+  "Rainbow Six Siege",
+  "and more other games",
+];
+console.log(games);
+//////////////////////
+let friends = [
+  "Andrey",
+  "Vakhtang",
+  "Nikita",
+  "Nikita",
+  "Volodya",
+];
+console.log(friends);
+//////////////////////
+var meal = [];
+meal.push("fruits");
+meal.push("vegetables");
+meal.push("drinks");
+meal.push("cereal");
+var i = meal.pop();
+//////////////////////
+var lessons = [];
+lessons.push("math");
+lessons.push("english");
+lessons.push("physic");
+lessons.push("chemistry");
+var i = lessons.shift();
+var arr = [1,4,6,32,7654,78.11,80,71,50,445,6663,3,5,7,8,9,17,142,548];
+//////////////////////
+function miniMaxSum(arr) {
+    let totals = [];
+
+    const reducer = (accumulator, currentValue) => accumulator + currentValue;
+
+    for (let i = 0; i < arr.length; i++) {
+        let filtered = arr.filter(function(value, index, arr) {
+            return i !== index;
+        });
+
+        totals.push(filtered.reduce(reducer));
+    }
+
+    console.log(Math.min(...totals) + " " + Math.max(...totals));
+}
+//////////////////////
+let arr = [1, 0, false];
+
+alert( arr.indexOf(0) );
+alert( arr.indexOf(false) );
+alert( arr.indexOf(null) );
+
+alert( arr.includes(1) );
+//////////////////////
+let arr = [1, 2, 3, 4, 5];
+arr.reverse();
+
+alert( arr );
+///////////////////////
+const weapons = [
+  { id: 1, name: "ak47" },
+  { id: 2, name: "m4a1" },
+  { id: 3, name: "famas" },
+]
+weapons.find(element => element.id === 3)
+weapons.find(element => element.id === 7)
